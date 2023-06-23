@@ -4,13 +4,12 @@ package com.example.gestaolaboratoriosapi.controller;
 import com.example.gestaolaboratoriosapi.dto.LaboratoryDTO;
 import com.example.gestaolaboratoriosapi.entity.Laboratory;
 import com.example.gestaolaboratoriosapi.service.ILaboratoryService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/api/laboratory")
+@RequestMapping("/laboratory")
 public class LaboratoryController {
 
     private ILaboratoryService laboratoryService;
@@ -23,5 +22,11 @@ public class LaboratoryController {
     public String saveLaboratory(@RequestBody LaboratoryDTO dto){
         Laboratory laboratory = laboratoryService.save(dto.toEntity());
         return "Laboratorio salvo";
+    }
+
+    @GetMapping
+    public ArrayList<LaboratoryDTO> getAllLaboratory(){
+        ArrayList<LaboratoryDTO> laboratories = laboratoryService.getAllLaboratorys();
+        return laboratories;
     }
 }
