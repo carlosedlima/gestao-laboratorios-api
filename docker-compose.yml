@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: gestao-laboratorio
+    image: gestao-laboratorio
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - local-postgres-compose
+  local-postgres-compose:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=us
+      - POSTGRES_DB=gestao_lab_db

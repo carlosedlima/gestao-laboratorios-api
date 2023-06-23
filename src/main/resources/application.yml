@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://local-postgres-compose:5432/gestao_lab_db
+    username: us
+    password: pass
+  jpa:
+    show-sql: true
+    hibernate:
+      properties:
+        hibernate.format_sql: true
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+#      settings:
+#        trace: false
+#        web-allow-others: false
