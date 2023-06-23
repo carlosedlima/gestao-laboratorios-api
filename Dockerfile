@@ -5,7 +5,7 @@ FROM openjdk
 WORKDIR /app
 
 # Copia o arquivo JAR para o contêiner
-COPY build/libs/gestao_laboratorio-0.0.1-SNAPSHOT.jar /app/gestao-laboratorios.jar
+COPY target/gestao-laboratorios-api-0.0.1-SNAPSHOT.jar /app/gestao-laboratorios.jar
 
 # Define o comando padrão a ser executado quando o contêiner for iniciado
 CMD ["java", "-jar", "gestao-laboratorios.jar"]

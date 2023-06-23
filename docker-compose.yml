@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: gestao-laboratorio
+    container_name: gestao-laboratorio-api
     image: gestao-laboratorio
     build: ./
     ports:
