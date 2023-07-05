@@ -24,9 +24,15 @@ public class EquipmentDTO {
 
 
     public Equipment toEntity() {
-        return new Equipment(id = this.id,
-                equipment = this.equipment,
-                description = this.description
-        );
+        return new Equipment(id, equipment, description);
+    }
+
+    public static EquipmentDTO fromEntity(Equipment equipment) {
+        return EquipmentDTO.builder()
+                .id(equipment.getId())
+                .nameEquipment(equipment.getEquipment())
+                .equipment(equipment.getEquipment())
+                .description(equipment.getDescription())
+                .build();
     }
 }

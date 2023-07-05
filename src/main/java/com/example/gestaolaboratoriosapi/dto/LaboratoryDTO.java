@@ -17,8 +17,13 @@ public class LaboratoryDTO {
     private String laboratoryName;
 
     public Laboratory toEntity() {
-        return new Laboratory(id = this.id,
-                laboratoryName = this.laboratoryName
-        );
+        return new Laboratory(id, laboratoryName);
+    }
+
+    public static LaboratoryDTO fromEntity(Laboratory laboratory) {
+        return LaboratoryDTO.builder()
+                .id(laboratory.getId())
+                .laboratoryName(laboratory.getLaboratoryName())
+                .build();
     }
 }

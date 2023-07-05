@@ -11,9 +11,9 @@ public interface IEquipmentService {
 
     Equipment save(Equipment dto);
 
-    EquipmentDTO getEquipment(Integer id);
+    EquipmentDTO getEquipment(Long id);
 
-    String remove(Integer id);
+    String remove(Long id);
 
     ArrayList<EquipmentDTO> getAllEquipment();
 

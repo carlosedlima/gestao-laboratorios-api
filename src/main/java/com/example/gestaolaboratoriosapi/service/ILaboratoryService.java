@@ -9,9 +9,9 @@ public interface ILaboratoryService {
 
     Laboratory save(Laboratory dto);
 
-    LaboratoryDTO getLaboratory(Integer id);
+    LaboratoryDTO getLaboratory(Long id);
 
-    String remove(Integer id);
+    String remove(Long id);
 
     ArrayList<LaboratoryDTO> getAllLaboratorys();
 

@@ -3,7 +3,7 @@ package com.example.gestaolaboratoriosapi.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="laboratorios")
+@Table
 public class Laboratory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

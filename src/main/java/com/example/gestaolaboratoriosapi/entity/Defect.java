@@ -4,24 +4,16 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
-public class Equipment {
+public class Defect {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    private String equipment;
+    @ManyToOne
+    private Equipment equipment;
 
     private String description;
-
-
-    public Equipment(Long id, String equipment, String description) {
-        this.id = id;
-        this.equipment = equipment;
-        this.description = description;
-    }
-
-    public Equipment() {
-    }
 
     public Long getId() {
         return id;
@@ -31,11 +23,20 @@ public class Equipment {
         this.id = id;
     }
 
-    public String getEquipment() {
+    public Defect() {
+    }
+
+    public Defect(Long id, Equipment equipment, String description) {
+        this.id = id;
+        this.equipment = equipment;
+        this.description = description;
+    }
+
+    public Equipment getEquipment() {
         return equipment;
     }
 
-    public void setEquipment(String equipment) {
+    public void setEquipment(Equipment equipment) {
         this.equipment = equipment;
     }
 
@@ -46,4 +47,5 @@ public class Equipment {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
