@@ -1,13 +1,17 @@
 spring:
   datasource:
+    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://local-postgres-compose:5432/gestao_lab_db
     username: us
     password: pass
   jpa:
     show-sql: true
     hibernate:
+      ddl-auto: update
       properties:
         hibernate.format_sql: true
+    database:
+      platform: org.hibernate.dialect.PostgreSQLDialect
 #  h2:
 #    console:
 #      enabled: true
