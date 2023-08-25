@@ -5,7 +5,6 @@ import com.example.gestaolaboratoriosapi.entity.Defect;
 import com.example.gestaolaboratoriosapi.repository.DefectRepository;
 import com.example.gestaolaboratoriosapi.service.IDefectService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +21,7 @@ public class DefectService implements IDefectService {
         Defect defect = defectDTO.toEntity();
         Defect savedDefect = defectRepository.save(defect);
         return DefectDTO.fromEntity(savedDefect);
+
     }
 
     @Override
