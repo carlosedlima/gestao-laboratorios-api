@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table
 public class Defect {
+    //Comentario
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
