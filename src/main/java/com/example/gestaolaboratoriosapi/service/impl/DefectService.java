@@ -21,7 +21,6 @@ public class DefectService implements IDefectService {
         Defect defect = defectDTO.toEntity();
         Defect savedDefect = defectRepository.save(defect);
         return DefectDTO.fromEntity(savedDefect);
-
     }
 
     @Override
