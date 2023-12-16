@@ -4,7 +4,6 @@ A API de Gestão de Laboratórios é um sistema desenvolvido para gerenciar info
 
 ## Participantes
 Carlos Eduardo de Lima  RA:200072
-Renan Martinho Vieira     RA:191514
 
 ## Funcionalidades
 
